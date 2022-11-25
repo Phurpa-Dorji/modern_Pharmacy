@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resigning Form</title>
+</head>
+<body style="background:#FFE6E6;">
+    <form target="_self"
+      id="leaveForm"
+      method="POST" >
+    <fieldset style="background: #B9FFF8;color:#000" style="background: #F1D3B3;text-align: center;color:red;">
+        <h2 style="font-weight: bold;font-size: 2rem;">Resignation Letter<br><small></small></h2>
+    </fieldset>
+    
+    <fieldset style="background: #B9FFF8;color:#000">
+        <legend for="name">Name</legend>
+        <div class="form-group">
+            <input id="name" type="text" name="entry.name" class="form-control" style="width: 60%;height:3.5vh" required>
+        </div>
+    </fieldset>
+    
+    <fieldset style="background: #B9FFF8;color:#000">
+        <legend for="email">Email</legend>
+        <div class="form-group">
+            <input id="email" type="text" name="entry.email" class="form-control" style="width: 60%;height:3.5vh" required>
+        </div>
+    </fieldset>
+
+    <fieldset style="background: #B9FFF8;color:#000">
+        <legend for="name">Status In This Company</legend>
+        <div class="form-group">
+            <input id="name" type="text" name="entry.name" class="form-control" style="width: 60%;height:3.5vh" required>
+        </div>
+    </fieldset>
+    
+    <fieldset style="background: #B9FFF8;color:#000">
+        <legend for="leave_type">Resign Type</legend>
+        <div class="form-group">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.choices" value="Old Age" required>
+                    Old Age
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.choices" value="Kicked Out" required>
+                    Kicked Out
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.choices" value="Joining New Job" required>
+                    Joining New Job
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.choices" value="LeavingCountry" required>
+                   Leaving Country
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.choices" value="Medical Issue" required>
+                    Medical Issue
+                </label>
+            </div>
+          
+            <div class="radio">
+                <label>
+                    <input type="radio" name="entry.choices" value="Other" required>
+                    Other
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset style="background: #B9FFF8;color:#000" >
+        <legend for="description">Reason</legend>
+        <div class="form-group">
+            <textarea id="reason" name="entry.reason" class="form-control" style="width: 100%;height:10vh" required></textarea>
+        </div>
+    </fieldset>
+    
+    <fieldset style="background: #B9FFF8;color:#000" >
+        <legend for="description">Word to the Company and it's member</legend>
+        <div class="form-group">
+            <textarea id="reason" name="entry.reason" class="form-control" style="width: 100%;height:5vh" required></textarea>
+        </div>
+    </fieldset>
+
+  
+
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+</div>
+</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js" integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
+<script>
+$('#leaveForm').submit(function (event) {
+    event.preventDefault()
+    $('#leaveForm').ajaxSubmit({
+        // data: extraData,
+        // dataType: 'jsonp',  
+        error: function () {
+
+            alert('Form Submitted. Thanks.')
+        
+        }
+    })
+})
+</script>
+</body>
+</html>
+</body>
+</html>
